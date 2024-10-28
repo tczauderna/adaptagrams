@@ -262,6 +262,17 @@ void deleteDoubleArray(double* a) {
 %rename(DialectNode) dialect::Node;
 %rename(DialectEdge) dialect::Edge;
 
+%rename(add) dialect::ProjSeq::operator+=;
+%rename(add) dialect::BoundingBox::operator+=;
+%ignore dialect::NodeIdCmp::operator();
+%rename(Dialect_and) dialect::operator&(AlignmentFlag a, AlignmentFlag b);
+%rename(Dialect_or) dialect::operator|=(AlignmentFlag& a, AlignmentFlag b);
+
+%rename(X1) dialect::BoundingBox::x;
+%rename(Y1) dialect::BoundingBox::y;
+%rename(X2) dialect::BoundingBox::X;
+%rename(Y2) dialect::BoundingBox::Y;
+
 %shared_ptr(dialect::Node)
 %shared_ptr(dialect::GhostNode)
 %shared_ptr(dialect::PeeledNode)
