@@ -19,13 +19,13 @@ autoreconf --install --verbose
 
 
 # Configure.
-./configure
+# ./configure CXXFLAGS="-std=c++11"
 
 # Instead, use this line if building for SWIG Java:
-# ./configure CPPFLAGS="-DUSE_ASSERT_EXCEPTIONS"
+./configure CXXFLAGS="-std=c++11" CPPFLAGS="-DUSE_ASSERT_EXCEPTIONS"
 
 # Instead, use this line if building for SWIG Python:
-# ./configure CXXFLAGS="-O3 -DNDEBUG -arch x86_64 -arch i386" LDFLAGS="-arch x86_64 -arch i386"
+# ./configure CXXFLAGS="-O3 -DNDEBUG -std=c++11 -arch x86_64 -arch i386" LDFLAGS="-arch x86_64 -arch i386"
 
 # Instead, use this line for development and for debugging the tests:
 #./configure --disable-shared CXXFLAGS="-g -O0"
